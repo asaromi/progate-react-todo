@@ -1,6 +1,16 @@
 import React, { useState } from 'react'
 import Todos from '../components/Todos'
 
+const styles = {
+  container: {
+    textAlign: 'center',
+    padding: '12px',
+  },
+  title: {
+    fontSize: '36px',
+  },
+}
+
 const App = () => {
   const [todos, setTodos] = useState([
     {
@@ -23,9 +33,8 @@ const App = () => {
   console.log(todos)
 
   return (
-    <div>
-      <h1>My Todo List</h1>
-
+    <div style={styles.container}>
+      <h1 style={styles.title}>My Todo List</h1>
       <Todos data={todos} />
     </div>
   )
